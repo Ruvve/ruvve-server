@@ -11,9 +11,9 @@ repositories {
     mavenCentral()
 }
 
-configurations.all {
-    exclude group: "commons-logging", module: "commons-logging"
-}
+//configurations.all {
+//    exclude group: "commons-logging", module: "commons-logging"
+//}
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'

@@ -1,20 +1,30 @@
 package com.ruvve.controller;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Controller;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.ruvve.model.DefaultDTO;
+import com.ruvve.utils.ResponseMessage;
+import com.ruvve.utils.StatusCode;
+//import lombok.extern;
+import lombok.extern.log4j.Log4j;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
-@RequestMapping("/")
+//@Log4j2
+@Slf4j
+@RestController
 public class TestController {
-    private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
+    /**
+     * Test API
+     */
     @GetMapping("/test")
-    public @ResponseBody String test() {
-        logger.info("테스트 잘 됨 ?");
-        return "SPRING DEMO TEST";
+    public ResponseEntity test() {
+        DefaultDTO dto = new DefaultDTO(StatusCode.OK, ResponseMessage.TEST);
+        log.info("TEST API");
+        return new ResponseEntity<>(dto, HttpStatus.OK);
     }
+
 }

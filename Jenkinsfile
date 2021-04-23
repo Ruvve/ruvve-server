@@ -3,8 +3,9 @@ pipeline {
   stages {
     stage('build') {
       steps {
+        echo 'pwd'
         sh './gradlew clean build'
-        sh 'nohup $JAVA_HOME/bin/java -jar -Dserver.port=8081 /home/ubuntu/ruvve-server/build/libs/ruvve-server-0.0.1-SNAPSHOT.jar > /home/ubuntu/ruvve-server/nohup.out 2>&1 &'
+        sh 'nohup $JAVA_HOME/bin/java -jar ./build/libs/ruvve-server-0.0.1-SNAPSHOT.jar > ./nohup.out 2>&1 &'
       }
     }
 

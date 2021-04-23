@@ -3,7 +3,6 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sh 'cp \'/home/ubuntu/application-config.yml ./src/main/resources/\''
         sh './gradlew clean build'
         sh 'sudo nohup java -jar /home/ubuntu/ruvve-server/build/libs/ruvve-server-0.0.1-SNAPSHOT.jar '
       }

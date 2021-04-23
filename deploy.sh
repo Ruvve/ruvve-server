@@ -14,6 +14,8 @@ else
   sleep 5
 fi
 
-nohup $JAVA_HOME/bin/java -jar ./build/libs/ruvve-server-0.0.1-SNAPSHOT.jar > ./nohup.out 2>&1 &
+export $(cat /home/ubuntu/.env | xargs)
+nohup $JAVA_HOME/bin/java -jar ./build/libs/ruvve-server-0.0.1-SNAPSHOT.jar > ./nohup.out 2>./nohup.log </dev/null &
 
 echo " > 배포 완료"
+

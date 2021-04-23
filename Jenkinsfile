@@ -1,23 +1,11 @@
 pipeline {
   agent any
   stages {
-    stage('build') {
+  stage('build') {
       steps {
-        echo 'building'
+        sh './gradlew clean build'
+        sh 'sudo nohup java -jar /home/ubuntu/ruvve-server/build/libs/ruvve-server-0.0.1-SNAPSHOT.jar'
       }
-    }
-
-    stage('upload') {
-      steps {
-        echo 'uploading'
-      }
-    }
-
-    stage('deploy') {
-      steps {
-        echo 'deploy'
-      }
-    }
-
+    }  
   }
 }

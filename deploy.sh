@@ -1,4 +1,4 @@
-echo " > 배포 시"
+echo " > 배포 시작"
 
 APP_NAME=ruvve-server
 

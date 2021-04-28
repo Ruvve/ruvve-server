@@ -31,9 +31,13 @@ Spring Boot 기반의 API 서버
 
 #### 직접 빌드
 
-`.env` 파일을 export해서 전역 변수 지정
+`set-env.sh` 파일을 실행.
+
+`$ source set-env` 
+
+
 
 `./gradlew clean build` 응 이용해서 빌드
-  
+
 
 

@@ -47,6 +47,8 @@ src/main/generated/
 
 .DS_Store
 application-config.yml
+application.properties
+application.yml
 config.yml
 config.*
 config/

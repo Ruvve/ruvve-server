@@ -1,6 +1,6 @@
 package com.ruvve.controller;
 
-import com.ruvve.core.rest.RestSuccessResponse;
+import com.ruvve.core.rest.DefaultResponse;
 import com.ruvve.utils.ResponseMessage;
 import com.ruvve.utils.StatusCode;
 import lombok.extern.slf4j.Slf4j;
@@ -18,7 +18,7 @@ public class TestController {
      */
     @GetMapping("/test")
     public ResponseEntity test() {
-        RestSuccessResponse<String> dto = new RestSuccessResponse(StatusCode.OK, ResponseMessage.TEST);
+        DefaultResponse<String> dto = new DefaultResponse(StatusCode.OK, ResponseMessage.TEST);
         log.info("TEST API");
         return new ResponseEntity<>(dto, HttpStatus.OK);
     }

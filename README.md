@@ -1,7 +1,26 @@
 # RUVVE SERVER
 
 <br /><br/>
+최근 도로나 인도에 **전동 킥보드**가 많이 보이고 있지 않나요? <br/>
+배달로 인한 오토바이의 수도 점점 증가하고 있어요.  <br/>
+<br/>
+이렇게 **개인형 이동수단**의 개체 수가 증가하면서 그에 따른 **사건/사고**들도 급격히 증가하고 있습니다.<br/>
+Ruvve는 이러한 문제를 해결하기 위해 개발된 **개인형 이동수단 전용 네비게이션**이에요!<br/>
+<br/>
+Ruvve가 가진 다른 네비게이션 서비스와의 차별점이 두 가지 있는데요.<br/>
+먼저, 딥러닝을 기반한 개체 추적으로 주행 중 장애물 탐지를 통해 알림을 주는 기능을 가집니다.<br/>
+또, AR 뷰를 통해 흔히 길치라고 부르는 공간감 능력이 부족한 분들도 직과적인 뷰를 통해 쉽게 길찾기를 할 수 있어요!<br/>
+<br/>
+더 자세한 이야기는 아래 Notion 에 소개해두었습니다 😆<br/>
+피드백과 질문은 언제나 환영입니다! 👉🏻 노션 "Feedback & Comment" Section에 달아주시면 됩니다 👀🔥
 
+<p align="center">
+<table align="center"><tr><td>
+ <a href="https://ruvve.notion.site/Ruvve-27b333f612814d07aaa2f6e8090c0e90"><img alt="notion" title="Notion" src="https://img.shields.io/badge/-Notion-white?style=for-the-badge&logo=notion&logoColor=black"/></a>
+ </td></tr></table>
+ </p>
+ 
+<br/><br/>
 <p align="center">
 <img alt="java-v12.0.1" src="https://img.shields.io/badge/java-v12.0.1-3f72af" />
 <img alt="Spring Boot-2.4.5" src="https://img.shields.io/badge/spring boot-2.4.5-green.svg" />
@@ -9,7 +28,7 @@
  
 <br/><br/>
   
-<img alt="Service Architecture" width="100%" src="https://user-images.githubusercontent.com/43839834/137591213-b14434fe-ff7d-4eb6-a638-23a5c9e56896.png" />
+<img alt="Service Architecture" width="100%" src="https://user-images.githubusercontent.com/43839834/139537676-b12f6b77-fbee-4f5b-bd15-3bfd88803b41.png" />
 
 <br/>
 
@@ -21,17 +40,22 @@
 <br/><br/>
   
 ### CICD - EC2 & Jenkins & S3 & CodeDeploy
-  
-```
+<br/><br/>
+<img alt="CICD Architecture" width="100%" src="https://user-images.githubusercontent.com/43839834/139537718-c0c07ee3-5624-461c-a1c4-551324656146.png" />
+
+
+<!--
+
   
 +-- local --+      +-- Github -+         +--- EC2 ---+         +---- S3 ---+             +---- EC2 ---+
 |           |      |           |         |           |         |           |     AWS     |            |
-|  spring   | push |  master   | Webhook |  Jenkins  |  Build  |    Jar    | Code Deploy | Run Server |   
-|   boot    | ---> |   branch  |  ---->  |   Build   |  ---->  |   Update  |  -------->  | with nohup |   
+|  spring   | push |  master   | Webhook |  Jenkins  |  Build  |    Jar    | Code Deploy | Run Server |
+|   boot    | --- |   branch  |  ----  |   Build   |  ----  |   Update  |  --------  | with nohup |
 |           |      |           |         |           |         |           |             |            |
 +-----------+      +-----------+         +-----------+         +-----------+             +------------+
 
-```
+
+-->
 
 
 <br/><br/>
